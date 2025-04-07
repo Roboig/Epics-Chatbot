@@ -1,0 +1,44 @@
+version: "3.1"
+
+stories:
+- story: who are you
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: affirm
+  - action: utter_affirm
+
+- story: rejection
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: deny
+  - action: utter_deny
+
+- story: contribute_social
+  steps:
+  - intent: contribution
+  - action: utter_button
+  - intent: input_social
+    entities:
+    - name: ishu
+    - phone_no: 9818771234
+  - slot_was_set:
+    - names: himanshu
+    - phone: 9650343710
+  - action: action_social
+
+- story: contribute_ngo
+  steps:
+  - intent: contribution
+  - action: utter_button
+  - intent: input_ngo
+    entities:
+    - name: ishu
+    - email_id: i@gmail.com
+  - slot_was_set:
+    - names: himanshu
+    - email: ishu@yahoo.co.in
+  - action: action_ngo
+
+  

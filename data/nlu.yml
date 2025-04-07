@@ -1,0 +1,137 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - no thanks
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you?
+    - who?
+    - are you real?
+    - is it a scam?
+
+- intent: contribution
+  examples: |
+    - How can I contribute?
+    - How to do contribution?
+    - what to do?
+    - how to do?
+    - how to move forward?
+    - lets move on
+    - move on
+
+- intent: social_worker
+  examples: |
+    - Social Worker
+    - social
+    - social worker
+
+- intent: ngo
+  examples: |
+    - NGO
+    - Ngo
+    - ngo
+    - nGo
+    - ngO
+
+- intent: input_social
+  examples: |
+    - my name is [ishu](name) and phone number is [965033710](phone_no)
+    - [himanshu](name) and [9818771234](phone_no)
+    - [dravin goswami](name) [9650343710](phone_no)
+    - [ishu](name) [9354285001](number)
+    - name is [ishu](name) and number is [9650343710](phone_no)
+    - phone number is [9818771234](phone_no) and name is [harsh](name)
+
+- intent: input_ngo
+  examples: |
+    - the mail id is [ishu@gmail.com](email_id) and name is [Christian Social Welfare Trust](name)
+    - mail is [h@yahoo.com](email_id) and name [Swadeshi Movement Foundation](name)
+    - name is [Blue Birds Social Welfare Society](name) and email is [i@gmail.co.in](email_id)
+    - [Blue Birds Social Welfare Society](name) [i@gmail.co.in](email_id)
+

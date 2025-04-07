@@ -1,0 +1,112 @@
+version: "3.1"
+
+intents:
+  - greet
+  - greet_second
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - contribution
+  - social_worker
+  - ngo
+  - input_social
+  - input_ngo
+
+entities:
+  - name
+  - phone_no
+  - email_id
+
+slots:
+  names:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: name
+  phone:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: phone_no
+  email:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: email_id
+
+responses:
+
+  utter_unhappy:
+  - text: "Sorry, to hear that you are unhappy, we hope that our website change your mood. How can we help you?"
+    buttons:
+      - title: "How Can You Contribute?"
+        payload: "/button"
+      - title: "Who Are We?"
+        payload: "/affirm"
+  
+  utter_happy:
+  - text: "Happy to hear that, we hope that you will have a good experience with out bot. How can we help you?"
+    buttons:
+      - title: "How Can You Contribute?"
+        payload: "/button"
+      - title: "Who Are We?"
+        payload: "/affirm"
+
+  utter_second:
+  - text: "How Can We Help You?"
+    buttons:
+      - title: "How Can You Contribute?"
+        payload: "/button"
+      - title: "Who Are We?"
+        payload: "/affirm"
+
+  utter_social_worker:
+  - text: "Please provide your Name and Phone No., So that our team will contact you to help you"
+
+  utter_ngo:
+  - text: "Please provide your organization's Name and Email-ID. So that our team can contact you to help you."
+
+  utter_button:
+  - text: "Kindly tell, How do you want to contribute:"
+    buttons:
+      - title: "Social Worker"
+        payload: "/social_worker"
+      - title: "NGO"
+        payload: "/ngo"
+
+  utter_affirm:
+  - text: "We are a NGO Freelancing website that helps NGO's to post the requirement for the internship or job and also, allows individual to find the best fit job or internship to contribute towards the society."
+
+  utter_deny:
+  - text: "Thank You, For Contacting With Us"
+
+  utter_greet:
+  - text: "Hi, How can I help you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://ibb.co/3YRQNYGK"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, who will be able to describe what we do? Do you want to know (yes/no)"
+
+actions:
+  - action_social
+  - action_ngo
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
